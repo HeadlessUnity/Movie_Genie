@@ -1,0 +1,43 @@
+2015-10-20
+	Kan nu skapa och spara Motion-Pictures i arkivet utefter några default
+	genrer och de grundläggande MP kategorierna. Window fick också bli ett arv
+	då med att den fungerar som en dialogruta med unika funktioner inbyggda. dessa funktioner 
+	kommer behövas för att kunna tracea variabler och kommunicera rätt med interfacet. när en operation är
+	färdig i window skickas informationen tillbaks till interfacet som sedan kan ändra i MPS:et och visa
+	det som ligger i MPS:et i Framesen.
+2015-10-25
+	Går nu att spara Serier också, men krävs lite mer vad gäller resten 
+	av funktionerna som tillhör serier-klassen. Windowklassen omorganiserades
+	lite också men det kanske kräver mer. Behöver också fixa add genre
+	och descriptive funktionerna.
+2015-02-06
+	Serier kan nu sparas fullständigt tillsammans med antal säsonger och antal
+	episoder per säsong.
+2015-02-09
+	Nu finns en dialogruta med stor textruta för att lägga till descriptions. Dessa kan ännu inte sparas i systemet, och eventuellt behövs det läggas till en funktion så att man kan bestämma till vilken motion-picture description texten ska sparas till.
+2016-08-25
+	Tog bort ett arv där interface ärvde från MPS. simpel association räckte här. Instanser av archive och mps skapas i main istället.
+	 sedan läggs arkivet in i MPS, där sedan MPS skickas med som attribut in till interfacet.
+2016-08-26
+	Kan nu lista mps i en listbox i add discriptive. behöver lägga till lite ask och tell så att disc sparas till vald mp. Behövde också skicka med arkivinstansen som ligger i MPS:et
+	så att windows kan se vad som ligger i arkivet.
+2016-08-29
+	Add Descriptive och add genre är nu färdiga
+2016-08-31
+	Add Rating är färdig. ändrade också i series och movies, tog bort några metoder såsom vfx, director, cinematography för det kändes inte rimliga att ha som attribut. story, 'direction'
+	och acting blev istället tomma attribut som anges en rating av 'add rating' metoden. get_descriptive metoden verkar inte behövas i series och movie heller, då den fyller inget syfte.
+2016-09-02
+	La till Remove descriptive och remove Motion-Picture
+2016-09-06
+	nu kommer ikoner upp på filmerna som läggs till. Update navframe, samt en coverframe där covers ligger behövdes här. Nu behövs en funktion som ser vart och vilken cover man klickar på så
+	att info frames kan uppdateras rätt!
+2016-09-08
+	Nu funkar allt som förväntat! Om en film klickas på ändras en text ruta vid sidan om, så man kan in effekt se information om varje film genom att klicka på den.
+	tog dock bort en frame, den högra där längre text skulle visas. Denna var onödig då den vänstra rutan visar
+	all nödvändig information. tog dock tillbaka get descriptive metoden och la den i Motion picture så att informationen skrev ut rätt (hämtas som en ordnad sträng)
+	i vänster/infoframen. Window har också en del funktioiner som inte specificerades i diagrammet, men dessa är endast organisatoriska funktioner och fyller inget beskrivande syfte i ett klass
+	diagram. Tog också bort music, director, release_date och production value funktionerna, eftersom dessa gör inget speciellt än lägger till specifik information/text, 
+	sake som add_descripitive funktionen redan kan göra mer generellt.
+		
+
+	
